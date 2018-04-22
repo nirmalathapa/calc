@@ -1,5 +1,5 @@
 var keys  = [].slice.call(document.getElementsByClassName('item'));
-var operators = ['/', '*', '-', '+'];
+var operators = ['/', '*', '-', '+', '÷', '×', '.'];
 
 keys.forEach(function (el){
     el.addEventListener('click', myfunction, false);
@@ -9,9 +9,19 @@ function myfunction(e){
     
     var display = document.querySelector('.display'); // initializing
     var previousVal = display.innerHTML;    //assignment 
-    var currentVal = this.innerHTML;
-    var op = document.getElementsByClassName('op');
     
+    var currentVal = this.innerHTML;
+    
+    var op = document.getElementsByClassName('op');
+    if(operators.includes(currentVal) && previousVal === ""){
+        return;
+    }
+    
+    if(operators.includes(currentVal) && operators.includes(previousVal.slice(-1))){
+        
+        return;
+    }
+
     if(currentVal === "AC"){
         display.textContent = "";
     }
@@ -32,7 +42,6 @@ function myfunction(e){
     }
     else{
         display.textContent= previousVal + currentVal;
-        
     }
 };
 
