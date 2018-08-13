@@ -5,4 +5,5 @@ A Beginner project to practice html, css and javascript with some DOM Manipulati
 ```
 Built with latest CSS Grid Layout 
 
-![](calc/cal.png)
+![cal]
+(https://github.com/nirmalathapa/calc/blob/master/cal.png)
