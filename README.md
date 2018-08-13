@@ -5,4 +5,4 @@ A Beginner project to practice html, css and javascript with some DOM Manipulati
 ```
 Built with latest CSS Grid Layout 
 
-![](cal.png)
+![](calc/cal.png)
